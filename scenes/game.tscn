@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://4dg4fm8sujil" path="res://scenes/functionality/killzone.tscn" id="5_vib57"]
 [ext_resource type="PackedScene" uid="uid://drkjwhkviudpy" path="res://scenes/functionality/enemy.tscn" id="6_ofrwv"]
 [ext_resource type="FontFile" uid="uid://cvn8jt56c4g55" path="res://assets/fonts/PixelOperator8.ttf" id="7_ja1v3"]
-[ext_resource type="PackedScene" uid="uid://cyljwb5a41adq" path="res://scenes/functionality/player_3.tscn" id="7_jromi"]
 [ext_resource type="PackedScene" uid="uid://bxheowrtjkept" path="res://scenes/functionality/exit.tscn" id="11_87tqn"]
 [ext_resource type="PackedScene" uid="uid://c1hunafgedaen" path="res://scenes/functionality/player2.tscn" id="11_k1fhy"]
 [ext_resource type="Script" path="res://scripts/camera_2d.gd" id="13_qcv1y"]
+[ext_resource type="PackedScene" uid="uid://dimp3lbbrbg8r" path="res://scenes/functionality/fish.tscn" id="14_nexvl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48a1t"]
 texture = ExtResource("1_0l2w1")
@@ -219,6 +219,8 @@ layer_1/tile_data = PackedInt32Array(-131053, 458752, 5, -458699, 393216, 3, -52
 position = Vector2(151, 89)
 shape = SubResource("WorldBoundaryShape2D_qpves")
 
+[node name="Fishies" type="Node" parent="."]
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_w7no0")]
@@ -244,9 +246,6 @@ position = Vector2(712, -9)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("4_w7no0")]
 position = Vector2(775, -72)
-
-[node name="Player 3" parent="Coins" groups=["Player3"] instance=ExtResource("7_jromi")]
-position = Vector2(-47, 1)
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -288,3 +287,12 @@ player1 = NodePath("../Player1")
 player2 = NodePath("../Player2")
 
 [node name="Crate" type="RigidBody2D" parent="."]
+
+[node name="Fish" parent="." instance=ExtResource("14_nexvl")]
+position = Vector2(47, 5)
+
+[node name="Fish2" parent="." instance=ExtResource("14_nexvl")]
+position = Vector2(200, -105)
+
+[node name="Fish3" parent="." instance=ExtResource("14_nexvl")]
+position = Vector2(400, -44)

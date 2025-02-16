@@ -5,7 +5,7 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player3"):
+	if body.is_in_group("Player1Cat"):
 		print("picked up gift")
 		game_manager.add_point()
 		audio_player.reparent(get_tree().current_scene)

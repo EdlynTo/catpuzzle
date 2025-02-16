@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bwsd7s8wnvwia"]
+[gd_scene load_steps=19 format=3 uid="uid://bwsd7s8wnvwia"]
 
 [ext_resource type="Texture2D" uid="uid://bfd3id1cedlb6" path="res://assets/sprites/world_tileset.png" id="1_0l2w1"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_a2ey8"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://4dg4fm8sujil" path="res://scenes/functionality/killzone.tscn" id="5_vib57"]
 [ext_resource type="PackedScene" uid="uid://drkjwhkviudpy" path="res://scenes/functionality/enemy.tscn" id="6_ofrwv"]
 [ext_resource type="FontFile" uid="uid://cvn8jt56c4g55" path="res://assets/fonts/PixelOperator8.ttf" id="7_ja1v3"]
+[ext_resource type="PackedScene" uid="uid://cyljwb5a41adq" path="res://scenes/functionality/player_3.tscn" id="7_jromi"]
 [ext_resource type="PackedScene" uid="uid://bxheowrtjkept" path="res://scenes/functionality/exit.tscn" id="11_87tqn"]
 [ext_resource type="PackedScene" uid="uid://c1hunafgedaen" path="res://scenes/functionality/player2.tscn" id="11_k1fhy"]
 [ext_resource type="Script" path="res://scripts/camera_2d.gd" id="13_qcv1y"]
@@ -243,6 +244,9 @@ position = Vector2(712, -9)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("4_w7no0")]
 position = Vector2(775, -72)
+
+[node name="Player 3" parent="Coins" groups=["Player3"] instance=ExtResource("7_jromi")]
+position = Vector2(-47, 1)
 
 [node name="Platforms" type="Node" parent="."]
 

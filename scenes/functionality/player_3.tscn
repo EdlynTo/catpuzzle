@@ -98,7 +98,7 @@ size = Vector2(14, 29)
 [node name="Player 3" type="CharacterBody2D"]
 script = ExtResource("1_o5it4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player3"]]
 sprite_frames = SubResource("SpriteFrames_ajbvo")
 animation = &"jump"
 autoplay = "idle"

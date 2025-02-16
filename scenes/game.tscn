@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bwsd7s8wnvwia"]
+[gd_scene load_steps=19 format=3 uid="uid://bwsd7s8wnvwia"]
 
 [ext_resource type="Texture2D" uid="uid://bfd3id1cedlb6" path="res://assets/sprites/world_tileset.png" id="1_0l2w1"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_a2ey8"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bxheowrtjkept" path="res://scenes/functionality/exit.tscn" id="11_87tqn"]
 [ext_resource type="PackedScene" uid="uid://c1hunafgedaen" path="res://scenes/functionality/player2.tscn" id="11_k1fhy"]
 [ext_resource type="Script" path="res://scripts/camera_2d.gd" id="13_qcv1y"]
+[ext_resource type="PackedScene" uid="uid://dimp3lbbrbg8r" path="res://scenes/functionality/fish.tscn" id="14_nexvl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48a1t"]
 texture = ExtResource("1_0l2w1")
@@ -218,6 +219,8 @@ layer_1/tile_data = PackedInt32Array(-131053, 458752, 5, -458699, 393216, 3, -52
 position = Vector2(151, 89)
 shape = SubResource("WorldBoundaryShape2D_qpves")
 
+[node name="Fishies" type="Node" parent="."]
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_w7no0")]
@@ -284,3 +287,12 @@ player1 = NodePath("../Player1")
 player2 = NodePath("../Player2")
 
 [node name="Crate" type="RigidBody2D" parent="."]
+
+[node name="Fish" parent="." instance=ExtResource("14_nexvl")]
+position = Vector2(47, 5)
+
+[node name="Fish2" parent="." instance=ExtResource("14_nexvl")]
+position = Vector2(200, -105)
+
+[node name="Fish3" parent="." instance=ExtResource("14_nexvl")]
+position = Vector2(400, -44)

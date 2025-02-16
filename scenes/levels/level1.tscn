@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bwsd7s8wnvwia" path="res://scenes/game.tscn" id="1_e6xk7"]
 [ext_resource type="PackedScene" uid="uid://urpmva2t0ok8" path="res://scenes/functionality/platform.tscn" id="2_00pa3"]
-[ext_resource type="PackedScene" path="res://scenes/functionality/balloon.tscn" id="2_clfdl"]
+[ext_resource type="PackedScene" uid="uid://cu7mpu0apd5jc" path="res://scenes/functionality/balloon.tscn" id="2_clfdl"]
 [ext_resource type="PackedScene" uid="uid://dh4861b8hwpom" path="res://scenes/functionality/cloud_platform.tscn" id="4_wbrd2"]
 
 [sub_resource type="Animation" id="Animation_m8l60"]
@@ -47,6 +47,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojkor"]
+size = Vector2(16, 16)
 
 [node name="Level1" instance=ExtResource("1_e6xk7")]
 
@@ -118,14 +119,16 @@ libraries = {
 }
 
 [node name="Crate" parent="." index="12" groups=["Crates"]]
+position = Vector2(42, 10)
 metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="Crate" index="0"]
 offset_left = -10.0
 offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.921569, 0.156863, 0.239216, 1)
+offset_right = 6.0
+offset_bottom = 6.0
+color = Color(0.368627, 0.215686, 0.168627, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crate" index="1"]
+position = Vector2(-2, -2)
 shape = SubResource("RectangleShape2D_ojkor")
